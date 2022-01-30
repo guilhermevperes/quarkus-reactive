@@ -1,0 +1,19 @@
+version: '3'
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    volumes:
+      - ./data/:/data/db
+    networks:
+      - backend
+  service:
+    container_name: service
+    image: quarkus/getting-started-with-reactive
+    ports:
+    - 8081:8081
+    networks:
+      - backend
+networks:
+  backend:
+    driver: "bridge"
