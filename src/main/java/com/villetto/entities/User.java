@@ -4,7 +4,6 @@ import io.quarkus.mongodb.panache.common.MongoEntity;
 import io.quarkus.mongodb.panache.reactive.ReactivePanacheMongoEntity;
 import lombok.*;
 
-import javax.persistence.Column;
 
 @EqualsAndHashCode(callSuper = true)
 @Data

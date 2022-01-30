@@ -5,15 +5,17 @@ services:
     image: mongo
     volumes:
       - ./data/:/data/db
-    networks:
-      - backend
-  service:
-    container_name: service
-    image: quarkus/getting-started-with-reactive
     ports:
-    - 8081:8081
-    networks:
-      - backend
-networks:
-  backend:
-    driver: "bridge"
+      - 27017:27017
+#    networks:
+#      - backend
+#  service:
+#    container_name: service
+#    image: quarkus/getting-started-with-reactive
+#    ports:
+#    - 8081:8081
+#    networks:
+#      - backend
+#networks:
+#  backend:
+#    driver: "bridge"
